@@ -3,9 +3,9 @@ require "sequel"
 
 DB = Sequel.connect(
   :adapter  => 'mysql',
-  :user     => 'top',
+  :user     => 'topics',
   :host     => '127.0.0.1',
-  :database => 'top',
+  :database => 'topics',
   :password => 'cloudf1'
 )
 
