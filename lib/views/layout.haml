@@ -3,11 +3,16 @@
 
  %head
   %title topics - tech talk topics
-  %link{ :rel => "stylesheet", :href => "styles/top.css", :type => "text/css" }
   %link{ :rel => "stylesheet", :href => "bootstrap/css/bootstrap.css", :type => "text/css" }
-  
+  %link{ :rel => "stylesheet", :href => "styles/topics.css", :type => "text/css" }
+  %link{ :rel => "stylesheet", :href => "bootstrap/css/bootstrap-responsive.css", :type => "text/css" }
+  :plain
+   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+   <!--[if lt IE 9]>
+     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+
  %body
   = haml :navbar
   = yield
 
-= haml :footer

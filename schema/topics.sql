@@ -35,6 +35,32 @@ create table topics (
 ) engine=InnoDB;
 
 
+drop table if exists tags;
+
+create table tags (
+
+  tagid INT AUTO_INCREMENT,
+  tag VARCHAR(128),
+  creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY(tagid),
+  UNIQUE KEY(tag)
+
+) engine=InnoDB;
+
+
+drop table if exists topictags;
+
+create table topictags (
+
+  topictagid INT AUTO_INCREMENT,
+  topicid VARCHAR(128),
+  tagid INT,
+  PRIMARY KEY(topictagid),
+  FOREIGN KEY(topicid) REFERENCES topics(topicid)
+
+) engine=InnoDB;
+
+
 drop table if exists comments;
 
 create table comments (
