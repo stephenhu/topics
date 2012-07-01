@@ -1,0 +1,25 @@
+cto office topics   latest, popular, random
+
+topics
+
+topic name
+topic summary
+url
+submitter (user id)
+timestamp
+votes
+attachment
+
+
+user
+
+user id (email)
+karma
+icon
+
+
+comments
+
+comment id
+topic id
+timestamp

@@ -1,0 +1,13 @@
+!!!
+%html{ "lang" => "en" }
+
+ %head
+  %title topics - tech talk topics
+  %link{ :rel => "stylesheet", :href => "styles/top.css", :type => "text/css" }
+  %link{ :rel => "stylesheet", :href => "bootstrap/css/bootstrap.css", :type => "text/css" }
+  
+ %body
+  = haml :navbar
+  = yield
+
+= haml :footer
