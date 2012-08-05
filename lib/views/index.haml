@@ -1,4 +1,12 @@
 .container-fluid
- %input.input-xxlarge{ :type => "text", :placeholder => "topic summary", :maxlength => "150" }
- %button.btn.btn-primary add topic
- %br
+  .row-fluid
+    .span12
+      %dl
+        %dt
+        %h2 mongodb distributed xml store
+        %small Thu Apr 26 04:17:22 2012
+        - topics.each do |t|
+          %p= t.name
+          %p= t.summary
+          -t.comments.each do |c|
+            %p= c.comment

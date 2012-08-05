@@ -1,16 +1,18 @@
 .navbar.navbar-fixed-top
-	.navbar-inner
-		.container-fluid
-			%a.btn.btn-navbar{ "data-toggle".to_sym => "collapse", "data-target".to_sym => ".nav-collapse" }
-				%span.icon-bar
-				%span.icon-bar
-				%span.icon-bar
-			%a.brand{:href => '/'} topics %sup alpha
-			.nav-collapse
-				%ul.nav
-					%li
-						%a.active{:href => '/'} talks
-					%li
-						%a{:href => '/popular'} most popular
-					%li
-						%a{:href => '/about'} about
+  .navbar-inner
+    .container-fluid
+      %a.btn.btn-navbar{ "data-toggle".to_sym => "collapse", "data-target".to_sym => ".nav-collapse" }
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => '/'}
+        topics
+        %sup alpha
+      .nav-collapse
+        %ul.nav
+          %li.active
+            %a{:href => '/'} talks
+          %li
+            %a{:href => '/popular'} most popular
+          %li
+            %a{:href => '/about'} about

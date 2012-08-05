@@ -53,7 +53,7 @@ drop table if exists topictags;
 create table topictags (
 
   topictagid INT AUTO_INCREMENT,
-  topicid VARCHAR(128),
+  topicid INT,
   tagid INT,
   PRIMARY KEY(topictagid),
   FOREIGN KEY(topicid) REFERENCES topics(topicid)

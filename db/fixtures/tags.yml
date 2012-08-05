@@ -1,0 +1,15 @@
+tag1:
+  tag: nosql
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+tag2:
+  tag: mongo
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+tag3:
+  tag: mysql  
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+

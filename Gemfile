@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 gem "haml"
-gem "sequel"
+gem "activerecord"
 gem "sinatra"
 gem "thin"
 

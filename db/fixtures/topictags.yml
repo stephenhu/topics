@@ -1,0 +1,15 @@
+topictag1:
+  topic_id: 1
+  tag_id: 1
+
+topictag2:
+  topic_id: 1
+  tag_id: 2
+
+topictag3:
+  topic_id: 2
+  tag_id: 1
+
+topictag4:
+  topic_id: 2
+  tag_id: 3

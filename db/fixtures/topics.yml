@@ -1,0 +1,11 @@
+topic1:
+  name: mongodb distributed xml store
+  summary: a distributed xml document store, how to scale beyond 2 million documents
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+topic2:
+  name: how twitter handles 200 million tweets per day with mysql
+  summary: sharding mysql allows us to scale up to 300 million tweets per day
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

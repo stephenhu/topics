@@ -1,0 +1,7 @@
+attachment1:
+  topic_id: 1
+  attachment: mongo.ppt
+
+attachment2:
+  topic_id: 2
+  attachment: tweet-sharding.pdf

@@ -1,21 +1,26 @@
 require "haml"
 require "mysql"
-require "sequel"
+require "active_record"
 require "sinatra"
 
+Dir.glob("./models/*").each { |r| require r }
 
-DB = Sequel.connect(
-  :adapter  => 'mysql',
-  :user     => 'topics',
-  :host     => '127.0.0.1',
-  :database => 'topics',
-  :password => 'cloudf1'
-)
+@config = YAML.load_file('/home/hu/projects/topics/config/database.yml')['development']
 
-#users = DB[:users]
-
-#users.each{|row| p row}
+ActiveRecord::Base.establish_connection @config
 
 get "/" do
-  haml :index
+  
+  #u = User.new( email: "goodruck@gmail.com" )
+  #u.save!
+
+  #@users = User.all
+  
+  #puts @users
+  
+  @topics = Topic.all
+
+  #puts @topics.length.to_s
+  haml :index, :locals => { :topics => @topics }
+  #haml :index
 end

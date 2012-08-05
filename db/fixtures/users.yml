@@ -1,0 +1,19 @@
+user1:
+  email: goodruck@gmail.com
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+user2:
+  email: mjordan@bulls.com
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+user3:
+  email: cbarkley@sixers.com
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+user4:
+  email: angela.baby@hk.com
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

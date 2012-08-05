@@ -1,0 +1,18 @@
+comment1:
+  topic_id: 1
+  comment: mongo sucks, i would rather have mysql anyday.
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+comment2:
+  topic_id: 1
+  comment: it is good for storage of tree like structures like xml, if you have relational data then forget it
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+comment3:
+  topic_id: 2
+  comment: mysql really is all you need, proven, fast, reliable.
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
