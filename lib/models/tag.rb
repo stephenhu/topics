@@ -1,3 +1,7 @@
 class Tag < ActiveRecord::Base
-  belongs_to :topics
+
+  has_and_belongs_to_many :topics, :join_table => "topictags"
+
+  validates_uniqueness_of :tag
+
 end

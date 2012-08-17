@@ -1,12 +1,24 @@
 .container-fluid
   .row-fluid
     .span12
-      %dl
-        %dt
-        %h2 mongodb distributed xml store
-        %small Thu Apr 26 04:17:22 2012
-        - topics.each do |t|
-          %p= t.name
-          %p= t.summary
-          -t.comments.each do |c|
-            %p= c.comment
+      - topics.each do |topic|
+        %dl
+          %dt
+            %h2
+              = topic.name 
+              %a{:href => url('/topics/#{topic.id}')}
+                %small (hus)
+              %small.pull-right
+                = topic.created_at
+            %dd
+              -topic.tags.each do |tag|
+                %button.btn.btn-success.btn-mini{:onclick => "redirect( 'tags', '#{tag.tag}' ); return false;"}
+                  = tag.tag
+            %dd.lead
+              = topic.summary
+            %dd
+              %button.btn.btn-primary.btn-mini
+                = "like (" + topic.votes.to_s + ")"
+              %button.btn.btn-info.btn-mini
+                = "comments (" + topic.comments.length.to_s + ")"
+        %hr
