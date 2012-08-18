@@ -6,39 +6,40 @@ require "sinatra/cookies"
 
 Dir.glob("./models/*").each { |r| require r }
 
-@config = YAML.load_file('/home/hu/projects/topics/config/database.yml')['development']
+@config =
+  YAML.load_file('/home/hu/projects/topics/config/database.yml')['development']
 
 ActiveRecord::Base.establish_connection @config
 
-get "/" do
-  
-  #u = User.new( email: "goodruck@gmail.com" )
-  #u.save!
 
-  #@users = User.all
-  
-  #puts @users
+get "/" do
   
   @topics = Topic.all
 
-  #puts @topics.length.to_s
   haml :index, :locals => { :topics => @topics }
-  #haml :index
+ 
 end
 
 get "/tags/:tagname" do
 
-  # get all topics for the tag
-  #puts Topic.all.each { |t| puts t.tags.length }
-  @ts = Topic.joins(:tags).where( 'tags.tag' => params[:tagname] )
+  @ts = Topic.joins(:tags).where('tags.tag' => params[:tagname])
   haml :tags, :locals => { :tag => params[:tagname], :tags => @ts }
 
 end
 
 get "/topics/:topicid" do
 
-  @topic = Topic.joins(:tags).where( 'id' => params[:topicid] ).first
+  @topic = Topic.joins(:tags).where('id' => params[:topicid]).first
   haml :topics, :locals => { :topic => @topic }
+
+end
+
+get "/users/:name" do
+
+  @user = User.where(:uuid => params[:name]).first
+
+  #TODO: check null
+  haml :users, :locals => { :user => @user } 
 
 end
 
@@ -49,6 +50,13 @@ get "/getcookie" do
 end
 
 get "/setcookie" do
-  response.set_cookie( "topics", "fuck you" )
+  response.set_cookie( "topics", "secret" )
+end
+
+get "/test/:email" do
+
+  u = User.new( :email => params[:email] )
+  u.save
+
 end
 

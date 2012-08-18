@@ -1,7 +1,9 @@
 .container-fluid
   .row-fluid
     .span12
-      - topics.each do |topic|
+      %h2
+        = user.canonical_name
+      - user.topics.each do |topic|
         %dl
           %dt
             %h2

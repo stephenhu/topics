@@ -1,7 +1,9 @@
-require 'active_record'
-require 'active_record/fixtures'
-require 'logger'
-require 'yaml'
+require "active_record"
+require "active_record/fixtures"
+require "digest/md5"
+require "logger"
+require "securerandom"
+require "yaml"
 
 
 task :default => :help
